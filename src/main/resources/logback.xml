@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration>
+
+  <include resource="org/springframework/boot/logging/logback/base.xml"/>
+
+  <appender name="REQUEST_FILE" class="ch.qos.logback.core.FileAppender">
+    <file>request.log</file>
+    <encoder>
+      <pattern>%msg%n</pattern>
+    </encoder>
+  </appender>
+
+  <logger name="com.dherbet.integration.testing.domain.RequestInformation" level="INFO" >
+    <appender-ref ref="REQUEST_FILE" />
+  </logger>
+
+</configuration>

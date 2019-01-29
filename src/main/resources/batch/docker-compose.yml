@@ -1,0 +1,12 @@
+version: '3.3'
+services:
+  sql-server:
+    image: mcr.microsoft.com/mssql/server:2017-CU8-ubuntu
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=p4ssw0rD
+      - MSSQL_PID=Developer
+    healthcheck:
+      test: /opt/mssql-tools/bin/sqlcmd -S localhost -U sa -P 'p4ssw0rD' -Q 'select 1'

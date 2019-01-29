@@ -1,0 +1,29 @@
+server:
+  port: 8070
+
+logging:
+  config: src/main/resources/logback.xml
+
+version:
+  application: ${project.version}
+  spring-boot: ${spring-boot.version}
+
+request:
+    file: request.log
+
+# Spring configuration
+spring:
+  batch:
+    initialize-schema: always
+    job:
+      enabled: false
+  jpa:
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.SQLServer2012Dialect
+    show-sql: false
+  datasource:
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:sqlserver://localhost:1433;databaseName=master;
+    username: sa
+    password: p4ssw0rD
