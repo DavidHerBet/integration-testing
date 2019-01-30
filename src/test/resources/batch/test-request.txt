@@ -1,0 +1,1 @@
+{"timestamp":1548688552301,"ipAddress":"0:0:0:0:0:0:0:1","endpoint":"/api/v1/version","url":"http://localhost:8070/api/v1/version","method":"GET"}

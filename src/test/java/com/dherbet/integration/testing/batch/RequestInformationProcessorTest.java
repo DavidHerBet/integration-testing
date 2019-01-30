@@ -12,7 +12,7 @@ import org.springframework.core.io.ClassPathResource;
 
 public class RequestInformationProcessorTest {
 
-    private static final String REQUEST_INFORMATION_FILE = "batch/test-request.log";
+    private static final String REQUEST_INFORMATION_FILE = "batch/test-request.txt";
 
     private static RequestInformationProcessor processor;
 
